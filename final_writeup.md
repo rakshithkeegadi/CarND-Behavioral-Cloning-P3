@@ -45,7 +45,7 @@ The architecture below implementation can be seen in model.py. (Lines 79- 93)
 
 #### 2. Attempts to reduce overfitting in the model
 
-To avoid overfitting I had to use a lesser number of epochs as low as 5 because the validation loss kept fluctulating for higher epochs. (Line 73 model.py)
+To avoid overfitting I had to use a lesser number of epochs as low as 5 epochs. (Line 73 model.py). Intitially I had used a epoch of 10 and then later noticed the model was over fitting becuase the validation loss kept on fluctuating rather than decreasing constantly. Trail and error method 5 turned out to be the best.
 
 #### 3. Model parameter tuning
 
@@ -117,9 +117,13 @@ Click the links for track1 [car cam  video](https://github.com/rakshithkeegadi/C
 I used the same model with just track1 data to run on track2. The car did a good job of driving in the middle till it hit steep curves. This problem was dealt with by gathering more data for track2 by driving the car in the center of the road as much as I can and capturing steering angles for steep curves only in track2 .
 
 Here are the images for neg -1.0 steering angle images for track2
-
+#### Left track2
 ![left neg](https://github.com/rakshithkeegadi/CarND-Behavioral-Cloning-P3/blob/master/examples/left_neg_1.jpg) 
+
+#### Center track2
 ![center neg](https://github.com/rakshithkeegadi/CarND-Behavioral-Cloning-P3/blob/master/examples/center_neg_1.jpg) 
+
+#### Right track2
 ![right_neg](https://github.com/rakshithkeegadi/CarND-Behavioral-Cloning-P3/blob/master/examples/right_neg_1.jpg)
 
 After using the data from track2 I could drive my car in track2 without the going over the edge and hitting barricades the video for track2. Click the links for track2 [car cam video](https://github.com/rakshithkeegadi/CarND-Behavioral-Cloning-P3/blob/master/car_cam_track2.mp4) and [aerial view.](https://www.youtube.com/watch?v=yImksKPnCds&feature=youtu.be)
